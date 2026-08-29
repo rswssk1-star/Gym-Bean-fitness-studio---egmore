@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #031B36;
+    color: #FFFFFF;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Oswald', -apple-system, BlinkMacSystemFont, 'Impact', sans-serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Artistic Flair & Glassmorphism Styles */
+.glass-panel {
+  background: rgba(6, 58, 120, 0.35);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 50px rgba(3, 27, 54, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.glass-card-white {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 20px 45px rgba(3, 27, 54, 0.4);
+}
+
+.blue-glow {
+  box-shadow: 0 0 50px -10px rgba(22, 135, 245, 0.5);
+}
+
+.blue-glow-strong {
+  box-shadow: 0 0 70px 10px rgba(22, 135, 245, 0.65);
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 2px white;
+  color: rgba(22, 135, 245, 0.2);
+}
+
+.text-stroke-blue {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.25);
+  color: transparent;
+}
+
+/* Custom subtle animation utilities */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.08);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatSlow 7s ease-in-out 2s infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 5s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #031B36;
+}
+::-webkit-scrollbar-thumb {
+  background: #0759B8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1687F5;
+}
+
